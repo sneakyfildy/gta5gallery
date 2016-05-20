@@ -1,0 +1,332 @@
+@main-bg-color: #8a0000;
+@main-bg-color-dark: lighten(@main-bg-color,5%);
+
+@sec-bg-color-dark   : #777;
+@sec-bg-color-light   : #aaa;
+
+@main-text-color-dark   : #333333;
+@main-text-color-light  : #FAFAFA;
+
+
+@box-shadow-main-color  : #aaa;
+
+@nav-item-border-color  : #AAAAAA;
+
+html{
+    background:url(../img/texture/bg_leather_light.jpg);
+/*    background-size: 100%;*/
+}
+
+
+.blockContent, #news{
+    background:url(../img/texture/darker_bg_mat.jpg);
+}
+
+nav li{
+    background:url(../img/texture/square.jpg);
+}
+html,
+button,
+input,
+select,
+textarea {
+   color: @main-text-color-dark;
+}
+body {
+    font: 12px/24px Verdana, Tahoma, Helvetica, Helvetica Neue, Arial;
+}
+
+.header-container,
+.footer-container{
+    background: @main-bg-color;
+}
+
+.header-container,
+.header-container a{
+    color: @main-text-color-light;
+    text-shadow: -1px -1px 1px darken(@main-bg-color, 10%);
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+nav.main-nav a{
+    color: #000;
+}
+
+nav a {
+    border-bottom: 4px solid @main-bg-color-dark;
+    border-top-color: @nav-item-border-color;
+    border-left-color: @nav-item-border-color;
+    border-right-color: @nav-item-border-color;
+}
+
+.block-header, h4{
+    color: @main-bg-color-dark;
+    font-family: 'RobotoCondensed','Open Sans Condensed', sans-serif;
+    margin-bottom: 0px;
+}
+.block-header{
+    font-size: 200%;
+}
+.block-header .header-wrap, h4{
+    border-bottom: 4px solid @main-bg-color-dark;
+}
+.block-header .header-wrap{
+    padding: 10px;
+}
+h4{
+    display: inline-block;
+}
+.block-text{
+    padding: 10px;
+    text-align: justify;
+}
+
+.blockContent .cover{
+    float: right;
+    width: 40%;
+    margin: 0 0 15px 15px;
+    position: relative;
+    background-size: 100%;
+}
+
+.blockContent .cover img{
+    width: 100%;
+    visibility: hidden;
+}
+
+/*lt ie 8  margin disappear on link hover fix*/
+html.lt-ie9 .blockContent .cover{
+    margin:0px;
+}
+html.lt-ie9 .blockContent .cover img{
+    visibility: visible;
+    margin: 0 0 15px 15px;
+}
+
+
+.fixed{
+    position: fixed;
+}
+
+.icon-phone{
+    display: inline-block;
+    background: url('/cheptsa/img/icons/phone.png');
+    width: 28px;
+    height: 28px;
+    vertical-align: top;
+}
+
+.icon-phone:hover {
+  background: url('/cheptsa/img/icons/phone_glow.png');
+  cursor: pointer;
+}
+.icon-phone:active {
+  background: url('/cheptsa/img/icons/phone.png');
+  cursor: pointer;
+}
+.logo {
+    color: white;
+    font-size: 2em;
+    text-align: center;
+    line-height: 24px;
+}
+
+.logo a{
+    text-decoration: none;
+}
+.logo .subtext{
+    font-size: 0.4em;
+    margin: 0;
+}
+.logo .maintext{
+    margin: 0 0 0.2em 0;
+}
+
+.break-all{
+    word-break: break-all;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title, .ie7 .logo {
+    padding-top: 20px;
+}
+
+.services_list ul{
+    color: @main-bg-color-dark;
+}
+.services_list ul li .text, .services_list ul li span{
+    color: @main-text-color-dark;
+}
+/*.logo{
+    background-image: url('../img/system/cheptsa_work_white_200_70.png');
+    *background-image: url('../img/system/cheptsa_work_red_200_72_ie.png');
+    width: 200px;
+    height: 72px
+}*/
+
+
+.spoiler_trigger:hover{
+    cursor: pointer;
+}
+
+.spoiler_trigger_nocontent:hover{
+    cursor: default;
+}
+
+.spoiler_trigger{
+    border-bottom: 1px dotted #555;
+}
+
+.spoiler_trigger.open{
+    font-weight: bold;
+}
+
+.spoiler_content{
+    display: none;
+    text-align: justify;
+    padding-left: 15px;
+}
+
+.spoiler_content.open{
+    /*    display: none;*/
+}
+
+table {
+    border: none;
+    border-spacing: 0px;
+    border-collapse: collapse;
+    font-size: 0.9em;
+}
+
+table .tr-header td{
+    background-color: lighten(@sec-bg-color-light, 20%);
+}
+
+tr{
+    vertical-align: middle;
+}
+td {
+    margin: 0;
+    padding: 4px;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid @main-bg-color-dark;
+    line-height: normal;
+}
+
+.tr-highlight-first td:hover, td.hovered{
+    background-color: #DEDEDE;
+}
+.tr-header{
+    font-weight: bold;
+    text-align: center;
+}
+
+.tr-highlight-first td:first-child{
+    text-align: left;
+}
+
+.page-nav{
+    border-bottom: 1px dotted gray;
+}
+
+nav ul{
+    padding: 0px;
+}
+
+nav.main-nav a{
+/*    display: block;*/
+/*    padding: 5px;*/
+/*    border: 1px solid gray;*/
+    margin-top: -1px;
+}
+
+#gallery{
+    height: 100%;
+}
+
+#gallery a{
+    display: block;
+    float: left;
+    position: relative;
+    margin: 0 1px 2px 1px;
+    overflow: hidden;
+}
+
+#gallery img{
+    opacity: 0;
+}
+
+
+
+.mobile-hidden{
+    display: none;
+}
+
+.no-border{
+    border: 0px !important;
+}
+
+.box-shadow-rb{
+    box-shadow: 2px 2px 4px lighten(@box-shadow-main-color, 10%);
+   -webkit-box-shadow: 2px 2px 4px lighten(@box-shadow-main-color, 10%) !important;
+   -moz-box-shadow: 2px 2px 4px lighten(@box-shadow-main-color, 10%) !important;
+   -o-box-shadow: 2px 2px 4px lighten(@box-shadow-main-color, 10%) !important;
+}
+
+.box-shadow-inner-white{
+    box-shadow: inset 0px 0px 24px lighten(@box-shadow-main-color, 100%);
+   -webkit-box-shadow:inset 0px 0px 24px lighten(@box-shadow-main-color, 100%) !important;
+   -moz-box-shadow: 1px 1px 4px @box-shadow-main-color !important;
+   -o-box-shadow: 1px 1px 4px @box-shadow-main-color !important;
+}
+
+.no-shadow{
+   box-shadow: none !important;
+   -webkit-box-shadow: none !important;
+   -moz-box-shadow: none !important;
+   -o-box-shadow: none !important;
+}
+
+.btn:hover {
+    cursor: pointer;
+}
+
+
+.unselectable, .unselectable *{
+    -webkit-touch-callout: none !important;
+    -webkit-user-select: none !important;
+    -khtml-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    -o-user-select: none !important;
+    user-select: none !important;
+}
+
+.all-mask{
+    opacity: 0.85;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 11;
+    display: none;
+}
+
+
+@media only screen and (min-width: 768px) {
+    .mobile-hidden{
+        display: block;
+    }
+}
